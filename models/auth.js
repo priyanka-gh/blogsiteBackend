@@ -14,8 +14,11 @@ const blogSchema=new mongoose.Schema({
     category:{
         type:String,
         required:true
+    },
+    photo:{
+        data:Buffer,
+        contentType:String
     }
-
 },{timestamps:true})
 
 const blogEntry=mongoose.model("Blog",blogSchema)
